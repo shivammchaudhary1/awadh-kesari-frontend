@@ -1,0 +1,16 @@
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* General rule */
+  html, body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
