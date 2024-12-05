@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  /* background-color: #9db4aa; */
+  /* background-color: #fff; */
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.dotted-background {
+  background-image: radial-gradient(circle, #ccc 1px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  --d: 24.6px;
+  width: 4.5px;
+  height: 4.5px;
+  border-radius: 50%;
+  color: #2b7a78;
+  box-shadow: calc(1*var(--d)) calc(0*var(--d)) 0 0,
+              calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1.1px,
+              calc(0*var(--d)) calc(1*var(--d)) 0 2.2px,
+              calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3.4px,
+              calc(-1*var(--d)) calc(0*var(--d)) 0 4.5px,
+              calc(-0.707*var(--d)) calc(-0.707*var(--d)) 0 5.6px,
+              calc(0*var(--d)) calc(-1*var(--d)) 0 6.7px;
+  animation: spinner-a90wxe 1s infinite steps(8);
+}
+
+@keyframes spinner-a90wxe {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* Style for the SOS button */
+.sos-button {
+  position: fixed;
+  right: 5px;  /* Adjust this value to position the button horizontally */
+  top: 47%;     /* Start at 50% from the top */
+  transform: translateY(-50%); /* Center the button vertically */
+  padding: 15px 25px;
+  background-color: red; /* Button background color*/
+  color: white;  /* Button text color */
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;  /* Remove underline from the text */
+  z-index: 1000; /* Ensure the button stays on top of other elements */
+}
+
+.sos-button:hover {
+  background-color: darkred; /* Button hover effect */
+}
+.social-button {
+  position: fixed;
+  right: 5px;  /* Adjust this value to position the button horizontally */
+  top: 56%;     /* Start at 50% from the top */
+  transform: translateY(-50%); /* Center the button vertically */
+  /* Button background color*/
+  color: white;  /* Button text color */
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;  /* Remove underline from the text */
+  z-index: 1000; /* Ensure the button stays on top of other elements */
+}
+.share{
+  background-color: red;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 5px;
+}
+
+.sicon{
+  font-size: 28px;
+  background-color: red;
+  /* font-size: 18px; */
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .social-button {
+    right: 5px;  /* Adjust this value to position the button horizontally */
+    top: 80%;     /* Start at 50% from the top */
+  }
+  .sos-button {
+    /* Adjust this value to position the button horizontally */
+    top: 70%;     /* Start at 50% from the top */
+    transform: translateY(-50%); /* Center the button vertically */
+    padding: 15px 25px;
+   
+  }
+}
